@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>New Report</title>
+</head>
+<body>
+  <h1>Create Incident Report</h1>
+  <form id="report-form">
+    <textarea name="details" placeholder="Event details"></textarea><br/>
+    <input type="text" name="latitude" id="lat" placeholder="Latitude" />
+    <input type="text" name="longitude" id="lon" placeholder="Longitude" /><br/>
+    <input type="text" name="tags" placeholder="Tags" /><br/>
+    <input type="text" name="priority" placeholder="Priority" /><br/>
+    <label>Follow Up Needed <input type="checkbox" name="follow_up" /></label><br/>
+    <input type="file" name="files" multiple /><br/>
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((pos) => {
+        document.getElementById('lat').value = pos.coords.latitude;
+        document.getElementById('lon').value = pos.coords.longitude;
+      });
+    }
+    const form = document.getElementById('report-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const res = await fetch('/reports/', { method: 'POST', body: data });
+      if (res.ok) {
+        const r = await res.json();
+        alert('Report saved with ref ' + r.reference);
+      } else {
+        alert('Error saving report');
+      }
+    });
+  </script>
+</body>
+</html>

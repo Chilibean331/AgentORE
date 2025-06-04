@@ -57,6 +57,11 @@ Use the generated `osint_map.html` to view collected intel on an interactive map
 See `ORE/osint/README.md` for details.
 
 
+## Web Application
+
+The `ore_webapp` directory contains a FastAPI-based interface with encrypted file storage, user authentication, and an incident reporting module capable of exporting reports to PDF.
+
+
 ## Mission Task Board
 
 The web application now includes endpoints and a simple UI for managing mission
@@ -73,5 +78,6 @@ The `ore_webapp` directory provides a local FastAPI web application. It now incl
 
 - The OSINT module now includes PGP utilities (`ORE/osint/crypto.py`) for
   encrypting notes or files with OpenPGP.
+
 
 

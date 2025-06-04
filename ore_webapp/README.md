@@ -8,6 +8,7 @@ This directory contains a basic scaffold for a secure, locally hostable web appl
 - **Encrypted File Storage** using symmetric encryption (Fernet).
 - **Dashboard** visualizing mission data with map overlays and time series charts. Charts can be exported to images or PDFs.
 - **Modular Apps** so new functionality can be added easily.
+- **Incident Reporting** for field reports with PDF export.
 
 All data is stored locally in SQLite and encrypted files remain offline. The app can be extended to integrate optional APIs for mapping or OSINT if needed.
 
