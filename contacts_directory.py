@@ -13,6 +13,7 @@ DOCS_DIR = os.path.join(DATA_DIR, "documents")
 
 
 def ensure_dirs():
+    os.makedirs(DATA_DIR, exist_ok=True)
     os.makedirs(DOCS_DIR, exist_ok=True)
 
 

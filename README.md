@@ -10,7 +10,8 @@ This repository now includes a simple command line tool for managing a confident
 - Activity log entries
 - Linked documents such as signed MOUs
 
-The data is saved in `contacts_data/contacts.json` and any attached documents are copied into `contacts_data/documents/`.
+When you run the tool, it creates a `contacts_data` directory if it does not already exist.
+All data is stored in `contacts_data/contacts.json` and any attached documents are copied into `contacts_data/documents/`.
 
 ## Encryption
 Notes for each contact are symmetrically encrypted using a basic XOR method derived from the password you provide. While this obfuscates the notes, it is **not** a substitute for strong cryptography.
