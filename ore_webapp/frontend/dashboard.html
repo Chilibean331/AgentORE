@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ORE Dashboard</title>
+</head>
+<body>
+  <h1>Mission Dashboard</h1>
+  <div id="stats"></div>
+  <script>
+    async function loadStats() {
+      const res = await fetch('/dashboard/');
+      if(res.ok) {
+        const data = await res.json();
+        document.getElementById('stats').innerText = `Users: ${data.users} Files: ${data.files}`;
+      }
+    }
+    loadStats();
+  </script>
+</body>
+</html>
