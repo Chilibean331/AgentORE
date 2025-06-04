@@ -13,6 +13,19 @@
 <body>
   <h1>Mission Dashboard</h1>
   <div id="stats"></div>
+
+  <p><a href="/tasks.html">Task Board</a></p>
+  <script>
+    async function loadStats() {
+      const res = await fetch('/dashboard/');
+      if(res.ok) {
+        const data = await res.json();
+        document.getElementById('stats').innerText = `Users: ${data.users} Files: ${data.files}`;
+      }
+    }
+    loadStats();
+  </script>
+
   <div id="map" style="height: 400px; margin-top: 1em;"></div>
   <canvas id="chart" style="max-width: 100%; margin-top: 1em;"></canvas>
   <div style="margin-top: 1em;">
@@ -20,5 +33,6 @@
     <button id="export-pdf">Export Chart PDF</button>
   </div>
   <script src="dashboard.js"></script>
+
 </body>
 </html>
