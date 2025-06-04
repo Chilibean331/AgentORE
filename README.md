@@ -55,3 +55,5 @@ The `ORE/osint` module provides basic automation for scraping news, monitoring s
 Use the generated `osint_map.html` to view collected intel on an interactive map.
 
 See `ORE/osint/README.md` for details.
+- The OSINT module now includes PGP utilities (`ORE/osint/crypto.py`) for
+  encrypting notes or files with OpenPGP.

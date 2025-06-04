@@ -13,6 +13,7 @@ This module collects open-source intelligence (OSINT) for the Nineveh Plains and
 - **Storage** in a local SQLite database
 - **Search and export** of collected intel to CSV or PDF
 - **Interactive map** generation using Leaflet (via `folium`)
+- **PGP encryption utilities** for securing sensitive notes and files
 
 ## Usage
 
@@ -52,6 +53,15 @@ python -m ORE.osint.cli send-signal "+10000000000" "+19999999999" "Secure messag
 python -m ORE.osint.cli generate-map
 python -m ORE.osint.cli export-csv
 python -m ORE.osint.cli export-pdf
+
+# PGP Encryption Helpers
+Generate a key and encrypt or decrypt text:
+
+```bash
+python -m ORE.osint.crypto gen-key "Alice" alice@example.com mypass
+python -m ORE.osint.crypto encrypt RECIPIENT_FP "secret message"
+python -m ORE.osint.crypto decrypt mypass "-----BEGIN PGP MESSAGE-----..."
+```
 ```
 
 Field photos and reports can be inserted into the database using custom scripts that call `add_intel()` with latitude and longitude values.
