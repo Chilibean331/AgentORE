@@ -3,7 +3,7 @@ from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 
 from .database import Base, engine
-from .routers import auth, dashboard, files
+from .routers import auth, dashboard, files, tasks
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
@@ -17,3 +17,4 @@ if frontend_path.exists():
 app.include_router(auth.router)
 app.include_router(dashboard.router)
 app.include_router(files.router)
+app.include_router(tasks.router)
