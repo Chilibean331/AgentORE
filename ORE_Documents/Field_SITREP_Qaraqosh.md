@@ -22,6 +22,7 @@ Operation Rising Ember continues its mission to restore and empower Christian co
 ### 5. Recommendations
 - Enhance coordination with local allies to improve navigability of the area.
 - Increase surveillance and intelligence gathering to adapt quickly to changes in enemy movement patterns.
+- Integrate OSINT collection using the new toolkit to monitor news, social media, and satellite data.
 - Foster community engagement through faith-based initiatives to reinforce collective resilience.
 
 ### 6. Concluding Remarks
