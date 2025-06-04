@@ -55,5 +55,10 @@ The `ORE/osint` module provides basic automation for scraping news, monitoring s
 Use the generated `osint_map.html` to view collected intel on an interactive map.
 
 See `ORE/osint/README.md` for details.
+
+
+The `ore_webapp` directory provides a local FastAPI web application. It now includes an interactive dashboard with map overlays and time series charts summarizing mission data. Charts can be exported directly from the browser.
+
 - The OSINT module now includes PGP utilities (`ORE/osint/crypto.py`) for
   encrypting notes or files with OpenPGP.
+
