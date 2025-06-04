@@ -3,11 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <title>ORE Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
   <h1>Mission Dashboard</h1>
   <div id="stats"></div>
+
   <p><a href="/report.html">Create New Report</a></p>
+
+
+  <p><a href="/tasks.html">Task Board</a></p>
+
   <script>
     async function loadStats() {
       const res = await fetch('/dashboard/');
@@ -18,5 +29,14 @@
     }
     loadStats();
   </script>
+
+  <div id="map" style="height: 400px; margin-top: 1em;"></div>
+  <canvas id="chart" style="max-width: 100%; margin-top: 1em;"></canvas>
+  <div style="margin-top: 1em;">
+    <button id="export-img">Export Chart Image</button>
+    <button id="export-pdf">Export Chart PDF</button>
+  </div>
+  <script src="dashboard.js"></script>
+
 </body>
 </html>

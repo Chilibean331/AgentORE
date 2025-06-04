@@ -56,6 +56,28 @@ Use the generated `osint_map.html` to view collected intel on an interactive map
 
 See `ORE/osint/README.md` for details.
 
+
 ## Web Application
 
 The `ore_webapp` directory contains a FastAPI-based interface with encrypted file storage, user authentication, and an incident reporting module capable of exporting reports to PDF.
+
+
+## Mission Task Board
+
+The web application now includes endpoints and a simple UI for managing mission
+tasks. Tasks can be created with fields for mission phase, urgency, location and
+the responsible user. Status updates and assignments allow the app to act as a
+basic Kanban board. Visit `tasks.html` after starting the server to add or view
+tasks.
+
+Daily or weekly status reports can be retrieved at `/tasks/reports/daily` or
+`/tasks/reports/weekly`.
+
+
+The `ore_webapp` directory provides a local FastAPI web application. It now includes an interactive dashboard with map overlays and time series charts summarizing mission data. Charts can be exported directly from the browser.
+
+- The OSINT module now includes PGP utilities (`ORE/osint/crypto.py`) for
+  encrypting notes or files with OpenPGP.
+
+
+

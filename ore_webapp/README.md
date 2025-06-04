@@ -6,7 +6,7 @@ This directory contains a basic scaffold for a secure, locally hostable web appl
 
 - **User Authentication** with hashed passwords and token-based session management.
 - **Encrypted File Storage** using symmetric encryption (Fernet).
-- **Dashboard** showing mission status from stored data.
+- **Dashboard** visualizing mission data with map overlays and time series charts. Charts can be exported to images or PDFs.
 - **Modular Apps** so new functionality can be added easily.
 - **Incident Reporting** for field reports with PDF export.
 
