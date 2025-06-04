@@ -5,3 +5,4 @@ passlib[bcrypt]
 python-multipart
 cryptography
 Jinja2
+fpdf

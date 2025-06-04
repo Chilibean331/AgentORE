@@ -1,3 +1,3 @@
-from . import auth, dashboard, files
+from . import auth, dashboard, files, reports
 
-__all__ = ["auth", "dashboard", "files"]
+__all__ = ["auth", "dashboard", "files", "reports"]

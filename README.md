@@ -55,3 +55,7 @@ The `ORE/osint` module provides basic automation for scraping news, monitoring s
 Use the generated `osint_map.html` to view collected intel on an interactive map.
 
 See `ORE/osint/README.md` for details.
+
+## Web Application
+
+The `ore_webapp` directory contains a FastAPI-based interface with encrypted file storage, user authentication, and an incident reporting module capable of exporting reports to PDF.
