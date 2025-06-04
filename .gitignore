@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+contacts_data/contacts.json
+contacts_data/documents/*
+!contacts_data/documents/.gitkeep
